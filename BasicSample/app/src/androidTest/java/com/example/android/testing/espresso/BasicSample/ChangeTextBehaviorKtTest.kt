@@ -34,7 +34,7 @@ class ChangeTextBehaviorKtTest {
     fun testOpenActivityWith123() {
         onView(withId(R.id.editTextUserInput)).perform(typeText("123"), closeSoftKeyboard())
         onView(withId(R.id.activityChangeTextBtn)).perform(click())
-        onView(isRoot()).perform(waitFor(500)) // Wait for activity transition
+        onView(isRoot()).perform(waitFor(500))
         onView(withId(R.id.show_text_view)).check(matches(withText("123")))
     }
 
